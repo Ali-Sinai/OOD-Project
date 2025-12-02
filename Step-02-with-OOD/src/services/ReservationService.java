@@ -2,6 +2,7 @@ package services;
 
 import constants.Notifier;
 import constants.PaymentMethods;
+import models.Reservation;
 
 public class ReservationService {
     private Notifier notifier = Notifier.EMAIL; //default Notifier

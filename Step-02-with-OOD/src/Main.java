@@ -1,8 +1,8 @@
 import constants.PaymentMethods;
 import models.Customer;
 import models.LuxuryRoom;
+import models.Reservation;
 import constants.Notifier;
-import services.Reservation;
 import models.Room;
 import services.ReservationService;
 

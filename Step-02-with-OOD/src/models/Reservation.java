@@ -1,7 +1,4 @@
-package services;
-
-import models.Customer;
-import models.Room;
+package models;
 
 public class Reservation {
     public Room room;
