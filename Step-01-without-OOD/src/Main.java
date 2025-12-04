@@ -1,10 +1,10 @@
-import constants.PaymentMethods;
-import models.Customer;
-import models.LuxuryRoom;
-import constants.Notifier;
-import services.Reservation;
-import models.Room;
-import services.ReservationService;
+import constants1.PaymentMethods;
+import models1.Customer;
+import models1.LuxuryRoom;
+import constants1.Notifier;
+import services1.Reservation;
+import models1.Room;
+import services1.ReservationService;
 
 public class Main {
     public static void main(String[] args){
