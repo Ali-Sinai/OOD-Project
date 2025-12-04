@@ -3,9 +3,10 @@ package services;
 import constants.Notifier;
 import constants.PaymentMethods;
 import models.Reservation;
+import services.Message.MessageSenderFactory;
+import services.Message.MessageSender;
 
 public class ReservationService {
-    private Notifier notifier = Notifier.EMAIL; //default Notifier
     private PaymentProcessor paymentProcessor = new PaymentProcessor();
 
     public void makeReservation(Reservation res, PaymentMethods paymentType, Notifier notifier){
@@ -26,17 +27,14 @@ public class ReservationService {
             case CASH:
                 paymentProcessor.payByCash(totalPrice);
                 break;
+            default:
+                break;
         }
 
         PrintInvoice.Print(res, totalPrice);
 
-        switch (this.notifier){
-           case EMAIL :
-           EmailSender emailSender = new EmailSender();
-           emailSender.sendEmail(res.getCustomer().getEmail(), "Your reservation confirmed!");
-           break;
-           default:
-               System.out.println("There is no Message Provider");
-        }
+        MessageSender messageSender = MessageSenderFactory.creat(notifier);
+        messageSender.sendMessage(res.getCustomer(), "Your reservation confirmed!");
+
     }
 }
