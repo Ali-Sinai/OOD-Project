@@ -1,7 +1,7 @@
-package services;
+package services1;
 
-import constants.Notifier;
-import constants.PaymentMethods;
+import constants1.Notifier;
+import constants1.PaymentMethods;
 
 public class ReservationService {
     private Notifier notifier = Notifier.EMAIL; //default Notifier

@@ -1,4 +1,4 @@
-package models;
+package models1;
 
 public class Customer {
     public String name;

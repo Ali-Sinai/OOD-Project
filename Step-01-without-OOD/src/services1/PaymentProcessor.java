@@ -1,4 +1,4 @@
-package services;
+package services1;
 
 class PaymentProcessor {
     public void payByCard(double amount){ System.out.println("Paid by card: " + amount); }
